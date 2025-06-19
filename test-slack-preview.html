@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 必須のOpen Graphタグ（Slack用） -->
+    <meta property="og:title" content="WEB技術学習度チェッカー">
+    <meta property="og:description" content="HTML・CSS・JavaScript の知識レベルを15問で診断。完全無料。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/test-slack-preview.html">
+    <meta property="og:image" content="https://your-domain.com/slack-test-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <title>Slack Preview Test - WEB技術学習度チェッカー</title>
+</head>
+<body>
+    <h1>Slack Preview Test</h1>
+    <p>このページはSlackでのプレビュー表示をテストするためのページです。</p>
+    
+    <h2>Slackでプレビューが表示されない場合の対処法：</h2>
+    <ol>
+        <li><strong>HTTPSでホストする</strong> - Slackは通常HTTPSのサイトのみプレビューを表示します</li>
+        <li><strong>実際のURLを使用する</strong> - ローカルファイル（file://）では表示されません</li>
+        <li><strong>画像を絶対URLで指定する</strong> - 相対パスではなく完全なURLを使用</li>
+        <li><strong>画像のサイズを確認する</strong> - 1200x630px推奨</li>
+        <li><strong>キャッシュをクリアする</strong> - Slackで /reload コマンドを実行</li>
+    </ol>
+    
+    <h2>デバッグ方法：</h2>
+    <p>Facebook Open Graph Debuggerを使用してメタタグを確認：</p>
+    <p><a href="https://developers.facebook.com/tools/debug/" target="_blank">https://developers.facebook.com/tools/debug/</a></p>
+    
+    <h2>現在のメタタグ情報：</h2>
+    <ul>
+        <li>Title: WEB技術学習度チェッカー</li>
+        <li>Description: HTML・CSS・JavaScript の知識レベルを15問で診断。完全無料。</li>
+        <li>Image: https://your-domain.com/slack-test-image.png</li>
+    </ul>
+</body>
+</html>

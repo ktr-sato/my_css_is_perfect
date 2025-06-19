@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slack Test Image Generator</title>
+</head>
+<body>
+    <canvas id="canvas" width="1200" height="630" style="border: 1px solid #ccc;"></canvas>
+    <br>
+    <button onclick="downloadImage()">Download Test Image</button>
+    
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Simple gradient background
+        const gradient = ctx.createLinearGradient(0, 0, 1200, 630);
+        gradient.addColorStop(0, '#4CAF50');
+        gradient.addColorStop(1, '#2196F3');
+        
+        // Fill background
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, 1200, 630);
+        
+        // Add text
+        ctx.fillStyle = 'white';
+        ctx.font = 'bold 64px Arial, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('WEB技術学習度チェッカー', 600, 250);
+        
+        ctx.font = '32px Arial, sans-serif';
+        ctx.fillText('HTML・CSS・JavaScript 診断', 600, 320);
+        
+        ctx.font = '24px Arial, sans-serif';
+        ctx.fillText('完全無料', 600, 380);
+        
+        // Add border
+        ctx.strokeStyle = 'white';
+        ctx.lineWidth = 4;
+        ctx.strokeRect(50, 50, 1100, 530);
+        
+        function downloadImage() {
+            const link = document.createElement('a');
+            link.download = 'slack-test-image.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+    </script>
+</body>
+</html>
