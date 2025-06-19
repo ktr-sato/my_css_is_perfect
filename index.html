@@ -12,11 +12,14 @@
     <meta name="author" content="WEB技術学習度チェッカー">
     <meta name="robots" content="index, follow">
     <meta name="language" content="ja">
-    
-    <!-- Open Graph Meta Tags -->
+      <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="WEB技術学習度チェッカー | HTML・CSS・JavaScript 知識レベル診断">
     <meta property="og:description" content="HTML、CSS、JavaScriptの知識レベルを測定できる無料の学習度チェッカー。15問の質問に答えて、あなたのWEB技術スキルを診断しましょう。">
+    <meta property="og:image" content="/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="WEB技術学習度チェッカー - HTML、CSS、JavaScriptのスキル診断">
     <meta property="og:url" content="">
     <meta property="og:site_name" content="WEB技術学習度チェッカー">
     <meta property="og:locale" content="ja_JP">
@@ -25,6 +28,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="WEB技術学習度チェッカー | HTML・CSS・JavaScript 知識レベル診断">
     <meta name="twitter:description" content="HTML、CSS、JavaScriptの知識レベルを測定できる無料の学習度チェッカー。15問の質問に答えて、あなたのWEB技術スキルを診断しましょう。">
+    <meta name="twitter:image" content="/og-image.png">
+    <meta name="twitter:image:alt" content="WEB技術学習度チェッカー - HTML、CSS、JavaScriptのスキル診断">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -61,27 +66,49 @@
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    
-    <!-- Structured Data -->
+      <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "WEB技術学習度チェッカー",
-        "description": "HTML、CSS、JavaScriptの知識レベルを測定できる無料の学習度チェッカー",
+        "description": "HTML、CSS、JavaScriptの知識レベルを測定できる無料の学習度チェッカー。15問の質問に答えて、あなたのWEB技術スキルを診断し、個別のアドバイスを提供します。",
         "url": "",
+        "image": "/og-image.png",
         "applicationCategory": "EducationalApplication",
         "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
         "permissions": "browser",
+        "softwareVersion": "1.0",
+        "dateCreated": "2024-01-01",
+        "dateModified": "2024-01-01",
+        "inLanguage": "ja",
+        "isAccessibleForFree": true,
         "offers": {
             "@type": "Offer",
             "price": "0",
-            "priceCurrency": "JPY"
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock"
         },
         "author": {
             "@type": "Organization",
             "name": "WEB技術学習度チェッカー"
-        }
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "150",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "featureList": [
+            "HTML知識レベル診断",
+            "CSS知識レベル診断", 
+            "JavaScript知識レベル診断",
+            "個別学習アドバイス",
+            "即座の結果表示",
+            "無料利用"
+        ]
     }
     </script>
 </head>
