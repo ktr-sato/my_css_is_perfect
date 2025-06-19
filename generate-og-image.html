@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OG Image Generator</title>
+</head>
+<body>
+    <canvas id="canvas" width="1200" height="630" style="border: 1px solid #ccc;"></canvas>
+    <br>
+    <button onclick="downloadImage()">Download PNG</button>
+    
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Create gradient background
+        const gradient = ctx.createLinearGradient(0, 0, 1200, 630);
+        gradient.addColorStop(0, '#667eea');
+        gradient.addColorStop(1, '#764ba2');
+        
+        // Fill background
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, 1200, 630);
+        
+        // Set text properties
+        ctx.fillStyle = 'white';
+        ctx.textAlign = 'left';
+        
+        // Main title
+        ctx.font = 'bold 64px Arial, sans-serif';
+        ctx.fillText('WEB技術学習度チェッカー', 100, 230);
+        
+        // Subtitle
+        ctx.font = '32px Arial, sans-serif';
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+        ctx.fillText('HTML・CSS・JavaScript 知識レベル診断', 100, 290);
+        
+        // Features
+        ctx.font = '24px Arial, sans-serif';
+        ctx.fillText('✓ 15問の詳細診断', 100, 380);
+        ctx.fillText('✓ 個別学習アドバイス', 100, 420);
+        ctx.fillText('✓ 無料で即座に結果表示', 100, 460);
+        
+        // Tech icons background
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
+        ctx.fillRect(800, 200, 100, 100);
+        ctx.fillRect(920, 200, 100, 100);
+        ctx.fillRect(800, 320, 100, 100);
+        
+        // Tech labels
+        ctx.fillStyle = 'white';
+        ctx.font = 'bold 36px Arial, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('HTML', 850, 265);
+        ctx.fillText('CSS', 970, 265);
+        ctx.fillText('JS', 850, 385);
+        
+        // Free badge
+        ctx.beginPath();
+        ctx.arc(1050, 150, 80, 0, 2 * Math.PI);
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+        ctx.fill();
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        
+        ctx.fillStyle = 'white';
+        ctx.font = 'bold 32px Arial, sans-serif';
+        ctx.fillText('無料', 1050, 160);
+        
+        function downloadImage() {
+            const link = document.createElement('a');
+            link.download = 'og-image.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+        
+        // Auto download on load
+        window.onload = function() {
+            setTimeout(downloadImage, 1000);
+        };
+    </script>
+</body>
+</html>
