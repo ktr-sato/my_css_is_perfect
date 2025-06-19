@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB技術学習度チェッカー</title>    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- スタート画面 -->
+        <div id="start-screen" class="screen active">            <div class="hero">
+                <i class="fas fa-code main-icon"></i>
+                <h1>WEB技術学習度チェッカー</h1>
+                <p class="subtitle">HTML、CSS、JavaScriptの知識レベルを測定しよう</p>
+                <button id="start-btn" class="btn btn-primary">
+                    <i class="fas fa-play"></i>
+                    テストを開始する
+                </button>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML</h3>
+                    <p>マークアップの基礎から応用まで</p>
+                </div>
+                <div class="feature">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS</h3>
+                    <p>スタイリングとレイアウト技術</p>
+                </div>
+                <div class="feature">
+                    <i class="fab fa-js-square"></i>
+                    <h3>JavaScript</h3>
+                    <p>プログラミング基礎から実践まで</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 質問画面 -->
+        <div id="quiz-screen" class="screen">
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <div class="progress-text">
+                    <span id="current-question">1</span> / <span id="total-questions">15</span>
+                </div>
+            </div>
+
+            <div class="quiz-content">
+                <div class="category-badge">
+                    <i id="category-icon" class="fab fa-html5"></i>
+                    <span id="category-name">HTML</span>
+                </div>
+                
+                <div class="question-container">
+                    <h2 id="question-text">質問文がここに表示されます</h2>
+                    <div id="options-container" class="options-container">
+                        <!-- 選択肢がここに動的に追加されます -->
+                    </div>
+                </div>
+
+                <div class="quiz-navigation">
+                    <button id="prev-btn" class="btn btn-secondary" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                        前の問題
+                    </button>
+                    <button id="next-btn" class="btn btn-primary" disabled>
+                        次の問題
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 結果画面 -->
+        <div id="result-screen" class="screen">
+            <div class="result-header">
+                <i class="fas fa-trophy result-icon"></i>
+                <h1>学習度診断結果</h1>
+            </div>
+
+            <div class="overall-score">
+                <div class="score-circle">
+                    <div class="score-value">
+                        <span id="overall-percentage">0</span>%
+                    </div>
+                </div>
+            </div>
+
+            <div class="detailed-results">
+                <div class="skill-result">
+                    <div class="skill-header">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar">
+                            <div id="html-progress" class="skill-fill"></div>
+                        </div>
+                        <span id="html-score" class="skill-score">0%</span>
+                    </div>
+                </div>
+
+                <div class="skill-result">
+                    <div class="skill-header">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar">
+                            <div id="css-progress" class="skill-fill"></div>
+                        </div>
+                        <span id="css-score" class="skill-score">0%</span>
+                    </div>
+                </div>
+
+                <div class="skill-result">
+                    <div class="skill-header">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-bar">
+                            <div id="js-progress" class="skill-fill"></div>
+                        </div>
+                        <span id="js-score" class="skill-score">0%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommendations">
+                <h3><i class="fas fa-lightbulb"></i> 学習のアドバイス</h3>
+                <div id="advice-container" class="advice-container">
+                    <!-- アドバイスがここに動的に追加されます -->
+                </div>
+            </div>            <div class="result-actions">
+                <button id="restart-btn" class="btn btn-primary">
+                    <i class="fas fa-redo"></i>
+                    もう一度テストする
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
