@@ -15,8 +15,7 @@ class WebSkillQuiz {
             {
                 category: 'html',
                 question: 'HTMLで正しいドキュメントタイプ宣言はどれですか？',
-                options: [
-                    '<!DOCTYPE html>',
+                options: [                    '<!DOCTYPE html>',
                     '<!DOCTYPE HTML5>',
                     '<DOCTYPE html>',
                     '<!DOCTYPE html5>'
@@ -527,9 +526,7 @@ class WebSkillQuiz {
                 }, 100);
             }, index * 300);
         });
-    }
-
-    restartQuiz() {        this.currentQuestionIndex = 0;
+    }    restartQuiz() {        this.currentQuestionIndex = 0;
         this.answers = [];
         this.scores = { html: 0, css: 0, javascript: 0 };
         this.startQuiz();
